@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #0a0a0a;
+            --text-light: #666666;
+            --border: #e0e0e0;
+            --accent: #0a0a0a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            animation: slideDown 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        .contact {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+        }
+
+        .contact a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact a:hover {
+            border-bottom-color: var(--text);
+        }
+
+        section {
+            margin-bottom: 80px;
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+
+        .experience-item,
+        .project-item {
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .experience-item:last-child,
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .meta {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .description p {
+            margin-bottom: 12px;
+        }
+
+        .description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            padding: 4px 12px;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--text);
+            color: var(--text);
+        }
+
+        .project-link {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: var(--text);
+            text-decoration: none;
+            margin-top: 12px;
+            border-bottom: 1px solid var(--text);
+            transition: opacity 0.3s ease;
+        }
+
+        .project-link:hover {
+            opacity: 0.6;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            color: var(--text-light);
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 48px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 12px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            section {
+                margin-bottom: 60px;
+            }
+
+            .experience-item,
+            .project-item {
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <div class="subtitle">Developer / Designer / Creator</div>
+            <div class="contact">
+                <a href="mailto:your.email@example.com">email@example.com</a>
+                <a href="https://github.com/yourusername" target="_blank">github</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin</a>
+                <a href="https://twitter.com/yourusername" target="_blank">twitter</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About</h2>
+            <div class="description">
+                <p>I'm a passionate developer focused on building elegant solutions to complex problems. With experience in full-stack development, I create intuitive user experiences backed by robust architecture.</p>
+                <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge with the developer community.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Senior Software Engineer</h3>
+                <div class="meta">Company Name • 2022 – Present</div>
+                <div class="description">
+                    <p>Led development of key features for a platform serving over 100k users. Architected scalable solutions and mentored junior developers.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">AWS</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Full Stack Developer</h3>
+                <div class="meta">Previous Company • 2020 – 2022</div>
+                <div class="description">
+                    <p>Built and maintained multiple web applications. Collaborated with cross-functional teams to deliver high-quality products on schedule.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Junior Developer</h3>
+                <div class="meta">Startup Name • 2018 – 2020</div>
+                <div class="description">
+                    <p>Contributed to feature development and bug fixes across the stack. Gained experience in agile methodologies and modern development practices.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Selected Work</h2>
+            
+            <div class="project-item">
+                <h3>Project Alpha</h3>
+                <div class="meta">Open Source • 2023</div>
+                <div class="description">
+                    <p>A modern task management application with real-time collaboration features. Built with performance and accessibility in mind.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Material-UI</span>
+                </div>
+                <a href="https://github.com/yourusername/project-alpha" class="project-link" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Portfolio Dashboard</h3>
+                <div class="meta">Personal Project • 2023</div>
+                <div class="description">
+                    <p>An interactive dashboard for tracking investments and financial metrics. Features real-time data visualization and customizable widgets.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Vue.js</span>
+                    <span class="tag">D3.js</span>
+                    <span class="tag">Express</span>
+                </div>
+                <a href="https://github.com/yourusername/portfolio-dashboard" class="project-link" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-item">
+                <h3>API Toolkit</h3>
+                <div class="meta">Open Source • 2022</div>
+                <div class="description">
+                    <p>A lightweight library for building RESTful APIs with built-in validation, authentication, and rate limiting.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Jest</span>
+                </div>
+                <a href="https://github.com/yourusername/api-toolkit" class="project-link" target="_blank">View Project →</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
