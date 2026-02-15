@@ -3,367 +3,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Sandhiya Chandrasekar - IT Service Management Professional</title>
+    <meta name="description" content="IT Service Management and SCCM Administration professional with 5+ years of experience in ITIL processes, ServiceNow, and enterprise systems.">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text: #0a0a0a;
-            --text-light: #666666;
-            --border: #e0e0e0;
-            --accent: #0a0a0a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Crimson Pro', serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            font-size: 18px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 80px 24px;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        header {
-            margin-bottom: 80px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--border);
-            animation: slideDown 0.8s ease-out 0.2s both;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 20px;
-            color: var(--text-light);
-            font-weight: 300;
-            margin-bottom: 24px;
-        }
-
-        .contact {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 14px;
-        }
-
-        .contact a {
-            color: var(--text);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact a:hover {
-            border-bottom-color: var(--text);
-        }
-
-        section {
-            margin-bottom: 80px;
-            animation: fadeIn 0.8s ease-out 0.4s both;
-        }
-
-        section:last-child {
-            margin-bottom: 0;
-        }
-
-        h2 {
-            font-size: 14px;
-            font-family: 'IBM Plex Mono', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 32px;
-            font-weight: 400;
-            opacity: 0.6;
-        }
-
-        .experience-item,
-        .project-item {
-            margin-bottom: 48px;
-            padding-bottom: 48px;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-
-        .experience-item:last-child,
-        .project-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            letter-spacing: -0.01em;
-        }
-
-        .meta {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-
-        .description {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        .description p {
-            margin-bottom: 12px;
-        }
-
-        .description p:last-child {
-            margin-bottom: 0;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-        }
-
-        .tag {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            padding: 4px 12px;
-            border: 1px solid var(--border);
-            border-radius: 2px;
-            color: var(--text-light);
-            transition: all 0.3s ease;
-        }
-
-        .tag:hover {
-            border-color: var(--text);
-            color: var(--text);
-        }
-
-        .project-link {
-            display: inline-block;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 14px;
-            color: var(--text);
-            text-decoration: none;
-            margin-top: 12px;
-            border-bottom: 1px solid var(--text);
-            transition: opacity 0.3s ease;
-        }
-
-        .project-link:hover {
-            opacity: 0.6;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            color: var(--text-light);
-            animation: fadeIn 0.8s ease-out 0.6s both;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 48px 20px;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            .subtitle {
-                font-size: 18px;
-            }
-
-            h2 {
-                font-size: 12px;
-            }
-
-            h3 {
-                font-size: 20px;
-            }
-
-            .description {
-                font-size: 16px;
-            }
-
-            section {
-                margin-bottom: 60px;
-            }
-
-            .experience-item,
-            .project-item {
-                margin-bottom: 40px;
-                padding-bottom: 40px;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Your Name</h1>
-            <div class="subtitle">Developer / Designer / Creator</div>
-            <div class="contact">
-                <a href="mailto:your.email@example.com">email@example.com</a>
-                <a href="https://github.com/yourusername" target="_blank">github</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin</a>
-                <a href="https://twitter.com/yourusername" target="_blank">twitter</a>
-            </div>
-        </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Sandhiya Chandrasekar</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <section id="about">
-            <h2>About</h2>
-            <div class="description">
-                <p>I'm a passionate developer focused on building elegant solutions to complex problems. With experience in full-stack development, I create intuitive user experiences backed by robust architecture.</p>
-                <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge with the developer community.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-title">Sandhiya Chandrasekar</h1>
+                <p class="hero-subtitle">IT Service Management & SCCM Administration Professional</p>
+                <p class="hero-description">IT Service Management and SCCM Administration professional with 5+ years of experience in Major Incident Management, Problem Management, Change Management, CMDB Administration, and enterprise patch management for global enterprises in Banking, Manufacturing, and Facilities sectors.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50" fill="#E8EBF0"/>
+                            <circle cx="50" cy="40" r="15" fill="#9BA4B5"/>
+                            <path d="M25 75C25 65 35 55 50 55C65 55 75 65 75 75" fill="#9BA4B5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-intro">I am an experienced IT Service Management professional with a proven track record in driving operational excellence through ITIL processes, ServiceNow administration, and enterprise systems management. My expertise spans incident, problem, and change management, combined with hands-on technical skills in SCCM administration and CMDB management. I excel at driving Root Cause Analysis (RCA), facilitating Change Advisory Board (CAB) meetings, and implementing Continuous Service Improvement (CSI) initiatives that enhance service availability, reduce incident recurrence, and improve SLA compliance.</p>
+                    
+                    <div class="expertise">
+                        <h3>Areas of Expertise</h3>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <h4>ITIL Service Management</h4>
+                                <p>Expert in Major Incident Management, Problem Management, Change Management, and CMDB Administration following ITIL best practices</p>
+                            </div>
+                            <div class="expertise-item">
+                                <h4>Enterprise Patch Management</h4>
+                                <p>Proficient in SCCM administration for monthly Microsoft security patching and application deployment across global enterprise environments</p>
+                            </div>
+                            <div class="expertise-item">
+                                <h4>Root Cause Analysis & CSI</h4>
+                                <p>Skilled in facilitating RCA investigations, implementing corrective actions, and driving continuous service improvement initiatives</p>
+                            </div>
+                            <div class="expertise-item">
+                                <h4>Stakeholder Communication</h4>
+                                <p>Experienced in managing escalations, CAB meetings, and cross-functional collaboration to ensure service reliability and SLA compliance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-category">
+                            <p class="skill-label">ITSM Processes:</p>
+                            <p class="skill-items">Incident Management, Major Incident Management, Problem Management, Change Management, CMDB Administration, Asset Lifecycle Management</p>
+                        </div>
+                        <div class="skills-category">
+                            <p class="skill-label">Platforms & Tools:</p>
+                            <p class="skill-items">ServiceNow, BMC Remedy, SCCM (v1910, v2103), Nexthink, Microsoft Power BI, Tenable</p>
+                        </div>
+                        <div class="skills-category">
+                            <p class="skill-label">Methodologies:</p>
+                            <p class="skill-items">ITIL 4, Root Cause Analysis (RCA), Continuous Service Improvement (CSI), SLA Management, Risk Assessment, Configuration Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience & Education</h2>
             
-            <div class="experience-item">
-                <h3>Senior Software Engineer</h3>
-                <div class="meta">Company Name • 2022 – Present</div>
-                <div class="description">
-                    <p>Led development of key features for a platform serving over 100k users. Architected scalable solutions and mentored junior developers.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Performance Manager – Problem Management</h3>
+                            <span class="timeline-date">May 2022 – Aug 2022</span>
+                        </div>
+                        <p class="timeline-company">Danske IT</p>
+                        <ul class="timeline-description">
+                            <li>Managed end-to-end problem management in ServiceNow for all Major Incidents and P3 incidents, ensuring ITIL standards compliance</li>
+                            <li>Coordinated cross-functional technical teams to complete Root Cause Analysis (RCA) and implement corrective actions, reducing repeat incidents</li>
+                            <li>Facilitated RCA ownership and Post-Task implementation meetings, tracking action completion within agreed timelines</li>
+                            <li>Identified opportunities for Continuous Service Improvement (CSI) and provided strategic reporting to Problem Manager</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">AWS</span>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Administrator - Multiple Roles</h3>
+                            <span class="timeline-date">Feb 2017 – Apr 2022</span>
+                        </div>
+                        <p class="timeline-company">Wipro Technologies</p>
+                        <ul class="timeline-description">
+                            <li><strong>Major Incident Manager:</strong> Managed 24x7 Major Incident Management for global enterprise customers, leading technical incident bridges and stakeholder communication for P1/P2 incidents to meet SLA targets</li>
+                            <li><strong>CMDB Manager:</strong> Administered Configuration Management Database in ServiceNow, maintaining 95%+ CI accuracy rate for critical infrastructure components</li>
+                            <li><strong>Change Manager:</strong> Led ITIL-based Change Management activities and chaired Change Advisory Board (CAB) meetings, assessing risks and impacts for successful implementation</li>
+                            <li><strong>SCCM Administrator:</strong> Managed System Center Configuration Manager (v1910, v2103) for monthly Microsoft security patching and application deployment across enterprise environments</li>
+                            <li>Established incident measurement timelines for MTTD, MTOE, and MTTR to support SLA compliance and continuous improvement</li>
+                            <li>Collaborated with Tenable and Nexthink teams to remediate vulnerabilities and optimize end-user device performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Master's in Infrastructure Management</h3>
+                            <span class="timeline-date">2020</span>
+                        </div>
+                        <p class="timeline-company">BITS Pilani</p>
+                        <ul class="timeline-description">
+                            <li>Specialized in IT infrastructure management and service delivery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>B.Sc. in Information Technology</h3>
+                            <span class="timeline-date">2016</span>
+                        </div>
+                        <p class="timeline-company">PSG College of Arts and Science</p>
+                        <ul class="timeline-description">
+                            <li>Foundation in information technology and systems management</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="experience-item">
-                <h3>Full Stack Developer</h3>
-                <div class="meta">Previous Company • 2020 – 2022</div>
-                <div class="description">
-                    <p>Built and maintained multiple web applications. Collaborated with cross-functional teams to deliver high-quality products on schedule.</p>
-                </div>
-                <div class="tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">Docker</span>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <h3>Junior Developer</h3>
-                <div class="meta">Startup Name • 2018 – 2020</div>
-                <div class="description">
-                    <p>Contributed to feature development and bug fixes across the stack. Gained experience in agile methodologies and modern development practices.</p>
-                </div>
-                <div class="tags">
-                    <span class="tag">HTML/CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Git</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Selected Work</h2>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects & Achievements</h2>
+            <p class="section-subtitle">Delivering operational excellence through ITIL best practices and enterprise systems management</p>
             
-            <div class="project-item">
-                <h3>Project Alpha</h3>
-                <div class="meta">Open Source • 2023</div>
-                <div class="description">
-                    <p>A modern task management application with real-time collaboration features. Built with performance and accessibility in mind.</p>
+            <div class="projects-grid">
+                
+                <!-- Project 1 - Problem Management -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Problem Management & Root Cause Analysis</h3>
+                            <div class="project-links">
+                                <a href="#" class="icon-link" title="Documentation">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Managed end-to-end problem management in ServiceNow for all Major Incidents and P3 incidents at Danske IT. Coordinated cross-functional technical teams to complete Root Cause Analysis (RCA) and implement corrective actions, reducing repeat incidents and improving service stability.</p>
+                        
+                        <div class="project-achievements">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Managed end-to-end problem management ensuring ITIL standards compliance</li>
+                                <li>Coordinated RCA activities with cross-functional teams to identify root causes</li>
+                                <li>Facilitated RCA ownership and Post-Task implementation meetings</li>
+                                <li>Reviewed and approved RCA documentation for quality assurance</li>
+                                <li>Identified opportunities for Continuous Service Improvement (CSI) initiatives</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">Reduced</span>
+                                <span class="stat-label">Repeat Incidents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Improved</span>
+                                <span class="stat-label">Service Stability</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">RCA Compliance</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">ServiceNow</span>
+                            <span class="tag">Problem Management</span>
+                            <span class="tag">Root Cause Analysis</span>
+                            <span class="tag">ITIL</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Firebase</span>
-                    <span class="tag">Material-UI</span>
-                </div>
-                <a href="https://github.com/yourusername/project-alpha" class="project-link" target="_blank">View Project →</a>
-            </div>
 
-            <div class="project-item">
-                <h3>Portfolio Dashboard</h3>
-                <div class="meta">Personal Project • 2023</div>
-                <div class="description">
-                    <p>An interactive dashboard for tracking investments and financial metrics. Features real-time data visualization and customizable widgets.</p>
+                <!-- Project 2 - Change Management -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Change Management & CAB Leadership</h3>
+                            <div class="project-links">
+                                <a href="#" class="icon-link" title="Documentation">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Led ITIL-based Change Management activities and chaired Change Advisory Board (CAB) meetings at Wipro Technologies. Assessed risks and impacts to ensure successful implementation of changes, documented procedures, and conducted Post-Implementation Reviews (PIRs) for critical and standard changes.</p>
+                        
+                        <div class="project-achievements">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Chaired CAB meetings to assess risks and approve changes before implementation</li>
+                                <li>Documented change management procedures for critical and standard changes</li>
+                                <li>Identified and mitigated potential risks to minimize service disruptions</li>
+                                <li>Conducted Post-Implementation Reviews (PIRs) to assess change effectiveness</li>
+                                <li>Developed change communication strategies for stakeholder awareness</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">Minimized</span>
+                                <span class="stat-label">Service Disruption</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Effective</span>
+                                <span class="stat-label">CAB Governance</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">PIR Completion</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Change Management</span>
+                            <span class="tag">CAB</span>
+                            <span class="tag">ITIL</span>
+                            <span class="tag">Risk Assessment</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="tags">
-                    <span class="tag">Vue.js</span>
-                    <span class="tag">D3.js</span>
-                    <span class="tag">Express</span>
-                </div>
-                <a href="https://github.com/yourusername/portfolio-dashboard" class="project-link" target="_blank">View Project →</a>
-            </div>
 
-            <div class="project-item">
-                <h3>API Toolkit</h3>
-                <div class="meta">Open Source • 2022</div>
-                <div class="description">
-                    <p>A lightweight library for building RESTful APIs with built-in validation, authentication, and rate limiting.</p>
+                <!-- Project 3 - CMDB -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Enterprise CMDB Administration & Governance</h3>
+                            <div class="project-links">
+                                <a href="#" class="icon-link" title="Documentation">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Administered and maintained Configuration Management Database (CMDB) in ServiceNow for Corning, establishing governance processes and data quality standards. Conducted regular audits using ServiceNow Discovery and Service Mapping tools to maintain infrastructure accuracy.</p>
+                        
+                        <div class="project-achievements">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Established CMDB governance processes with data quality standards</li>
+                                <li>Maintained CI accuracy rate above 95% for critical infrastructure</li>
+                                <li>Conducted regular CMDB audits and reconciliation activities</li>
+                                <li>Integrated CMDB with monitoring tools (Nexthink) and vulnerability platforms (Tenable)</li>
+                                <li>Developed SOPs for CMDB data entry and configuration auditing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">95%+</span>
+                                <span class="stat-label">CI Accuracy Rate</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Audit Compliance</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Reduced</span>
+                                <span class="stat-label">Resolution Time</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">ServiceNow</span>
+                            <span class="tag">CMDB</span>
+                            <span class="tag">ITIL</span>
+                            <span class="tag">Asset Management</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="tags">
-                    <span class="tag">Node.js</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">Jest</span>
-                </div>
-                <a href="https://github.com/yourusername/api-toolkit" class="project-link" target="_blank">View Project →</a>
-            </div>
-        </section>
 
-        <footer>
-            <p>© 2026 Your Name. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-</html>
+                <!-- Project 4 - Major Incident Management -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>24x7 Major Incident Management</h3>
+                            <div class="project-links">
+                                <a href="#" class="icon-link" title="Documentation">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Led 24x7 Major Incident Management for global enterprise customers at Wipro, managing technical incident bridges and stakeholder communication for high-severity P1/P2 incidents. Implemented standardized processes that improved MTTR and SLA compliance.</p>
+                        
+                        <div class="project-achievements">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Managed 24x7 operations for P1/P2 incidents across global enterprise environments</li>
+                                <li>Implemented standardized incident management processes improving MTTR</li>
+                                <li>Established timelines for MTTD, MTOE, and MTTR to ensure SLA compliance</li>
+                                <li>Conducted post-incident reviews and root cause analysis for critical incidents</li>
+                                <li>Proactively communicated service disruptions to stakeholders with comprehensive reporting</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">99%+</span>
+                                <span class="stat-label">SLA Compliance</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Improved</span>
+                                <span class="stat-label">MTTR</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24x7</span>
+                                <span class="stat-label">Coverage</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">ServiceNow</span>
+                            <span class="tag">BMC Remedy</span>
+                            <span class="tag">ITIL</span>
+                            <span class="tag">P1/P2 Incidents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - SCCM -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Enterprise Patch Management with SCCM</h3>
+                            <div class="project-links">
+                                <a href="#" class="icon-link" title="Documentation">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Administered System Center Configuration Manager (SCCM) v1910 and v2103 for monthly Microsoft security patching across enterprise environments. Collaborated with Tenable and Nexthink teams to remediate vulnerabilities and optimize device performance, ensuring security compliance.</p>
+                        
+                        <div class="project-achievements">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Managed monthly Microsoft security patching cycles for enterprise end-user devices</li>
+                                <li>Coordinated testing schedules and production rollouts to minimize service disruptions</li>
+                                <li>Gathered device details from Tenable and executed forced installation of cumulative updates</li>
+                                <li>Collaborated with Nexthink team for endpoint analytics and performance optimization</li>
+                                <li>Developed SOPs for routine maintenance and incident response processes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">Enhanced</span>
+                                <span class="stat-label">Security Posture</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Monthly</span>
+                                <span class="stat-label">Patch Cycles</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Enterprise</span>
+                                <span class="stat-label">Scale Deployment</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">SCCM v1910</span>
+                            <span class="tag">SCCM v2103</span>
+                            <span class="tag">Tenable</span>
+                            <span class="tag">Nexthink</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h3>ITIL 4 Foundation</h3>
+                    <p>IT Service Management framework certification</p>
+                </div>
+                <div class="cert-card">
+                    <h3>IBM Certified Deployment Professional</h3>
+                    <p>Enterprise deployment and implementation</p>
+                </div>
+                <div class="cert-card">
+                    <h3>VTSP – SV (Server Virtualization 2017)</h3>
+                    <p>VMware Technical Sales Professional</p>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS Technical Professional</h3>
+                    <p>Amazon Web Services technical expertise</p>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS Business Professional</h3>
+                    <p>AWS business and solutions knowledge</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Build and Deploy Apps with Google AI Studio</h3>
+                    <p>AI application development and deployment expertise</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Multilingual AI Speech App with Vibe Coding</h3>
+                    <p>Advanced AI speech processing and multilingual applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <p>I am open to exploring new opportunities in IT Service Management, ITIL-based process implementation, and SCCM administration. If my background aligns with your requirements, I'd be happy to connect and discuss how I can support your team's goals.</p>
+                <div class="contact-links">
+                    <a href="/cdn-cgi/l/email-protection#8af9ebe4eee2e3f3eba4e3fecae5fffee6e5e5e1a4e9e5e7" class="contact-btn">Email Me</a>
+                    <a href="tel:+918220327013" class="contact-btn">Call: +91-8220327013</a>
+                    <a href="https://www.linkedin.com/in/sandhiya-chandrasekar-9305bb393" target="_blank" class="contact-btn">LinkedIn</a>
+                </div>
+                <p style="margin-top: 2rem; font-size: 1rem; color: var(--text-light);">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Based in Bangalore, India
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sandhiya Chandrasekar. All rights reser
